@@ -2,6 +2,13 @@
 
 var mod = angular.module('example', []);
 
+
+class ParentView {
+  record: { id: string };
+  flag: boolean;
+  save(data: string) { }
+}
+
 mod.component('parentView', {
   controller: ParentView,
   template: parentViewTemplate => parentViewTemplate,
@@ -10,12 +17,6 @@ mod.component('parentView', {
     flag: '<'
   }
 });
-
-class ParentView {
-  record: { id: string };
-  flag: boolean;
-  save(data: string) { }
-}
 
 mod.factory('parentViewTemplate', function() {
   let $ctrl: ParentView;
@@ -27,6 +28,13 @@ mod.factory('parentViewTemplate', function() {
     </div>
   );
 });
+
+
+class ChildView {
+  someParameter: string;
+  onSave: (param: { data: string }) => void;
+  // doSave() { this.onSave({data: 'abc'}); }
+}
 
 mod.component('childView', {
   controller: ChildView,
@@ -41,9 +49,3 @@ mod.factory('childViewTemplate', function() {
   let $ctrl: ChildView;
   return <div>{$ctrl.someParameter}</div>;
 });
-
-class ChildView {
-  someParameter: string;
-  onSave: (param: { data: string }) => void;
-  // doSave() { this.onSave({data: 'abc'}); }
-}
