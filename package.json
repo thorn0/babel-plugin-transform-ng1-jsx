@@ -1,0 +1,27 @@
+{
+  "name": "babel-plugin-transform-ng1-jsx",
+  "version": "0.1.0",
+  "description": "Type-checked templates for Angular 1",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babel-plugin",
+    "jsx",
+    "typescript",
+    "angular",
+    "templates"
+  ],
+  "author": "Georgii Dolzhykov <thorn.mailbox@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thorn0/babel-plugin-transform-ng1-jsx.git"
+  },
+  "dependencies": {
+    "babel-generator": "^6.4.5",
+    "babel-plugin-syntax-jsx": "^6.3.13",
+    "lodash": "^4.2.1"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "plugins": ["syntax-flow", "syntax-jsx", "transform-flow-strip-types", "../lib/index"]
+}
