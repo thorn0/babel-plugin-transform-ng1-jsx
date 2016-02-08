@@ -11,7 +11,7 @@ declare namespace JSX {
 
   type Element = string;
     
-  // Uncomment the next line to check the types of component attributes. It almost works. 
+  // Uncomment the next line to enable the type-checking of component attributes. It almost works. 
     
   // interface ElementAttributesProperty {}
     
