@@ -5,6 +5,8 @@ declare namespace JSX {
       class?: string;
       "ng-if"?: boolean;
       "ng-show"?: boolean;
+      "ng-hide"?: boolean;
+      "ng-class"?: { [key: string]: string };
       // and so on
     }
   }
