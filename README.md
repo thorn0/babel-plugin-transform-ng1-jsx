@@ -52,7 +52,7 @@ You can find an example to play with in the `example` folder. Run `npm run build
 
 # Issues / TBD
 
-* **Type-checking component attributes**. TypeScript **almost** (but not quite) allows this. See the comments in [`ng1-jsx.d.ts`](ng1-jsx.d.ts).
+* Type-checking component attributes. This one currently is **a big show stopper**. TypeScript _almost_ (but not quite) allows this. See the comments in [`ng1-jsx.d.ts`](ng1-jsx.d.ts).
 
 * Non-JS syntax elements in Angular expressions: filters and one-time bindings.
 
