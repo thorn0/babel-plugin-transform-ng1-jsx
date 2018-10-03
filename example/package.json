@@ -5,7 +5,7 @@
     "babel-plugin-syntax-flow": "^6.5.0",
     "babel-plugin-syntax-jsx": "^6.5.0",
     "babel-plugin-transform-flow-strip-types": "^6.5.0",
-    "typescript": "^1.7.5"
+    "typescript": "3.1.1"
   },
   "scripts": {
     "build": "tsc --outDir out1-ts & babel out1-ts --out-dir out2-babel",
