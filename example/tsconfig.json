@@ -3,7 +3,5 @@
     "jsx": "preserve",
     "experimentalDecorators": true
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

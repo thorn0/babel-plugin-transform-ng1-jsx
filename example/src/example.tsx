@@ -1,12 +1,11 @@
-/// <reference path="../../ng1-jsx.d.ts" />
+/// <reference path="../../ng1-jsx.ts" />
 
 var mod = angular.module('example', []);
 
-
-class ParentView {
+class ParentView extends Component {
   record: { id: string };
   flag: boolean;
-  save(data: string) { }
+  save(data: string) {}
 }
 
 mod.component('parentView', {
@@ -21,19 +20,24 @@ mod.component('parentView', {
 mod.factory('parentViewTemplate', function() {
   let $ctrl: ParentView;
   return (
-    <div class='ooo'>
-      { $ctrl.record.id }
-      <ChildView someParameter="aaa" onSave={ ({data}) => $ctrl.save(data) } />
-      <span ng-if={ $ctrl.flag }>foo</span>
+    <div class="ooo">
+      {$ctrl.record.id}
+      <ChildView
+        someParameter="aaa"
+        onSave={({ data }) => $ctrl.save(data)}
+      />
+      <span ng-if={$ctrl.flag}>foo</span>
     </div>
   );
 });
 
-
-class ChildView {
+class ChildView extends Component {
   someParameter: string;
   onSave: (param: { data: string }) => void;
-  // doSave() { this.onSave({data: 'abc'}); }
+  doSave() {
+    var a = { a: 1 };
+    this.onSave({ data: 'abc' });
+  }
 }
 
 mod.component('childView', {
@@ -43,7 +47,7 @@ mod.component('childView', {
     someParameter: '<',
     onSave: '&'
   }
-})
+});
 
 mod.factory('childViewTemplate', function() {
   let $ctrl: ChildView;
